@@ -45,17 +45,26 @@ ul{
 
 li{
   background-color: cornflowerblue;
+  position: relative;
 }
 
 li+li{
   margin-top: 20px;
 }
 
+li::before, li::after{
+  position: absolute;
+}
+
 li::before{
  content: open-quote;
+ right: calc(100% + 5px);
+ top:-0.4em;
 }
 
 li::after{
   content: close-quote;
+  left: calc(100% + 5px);
+  bottom:-0.9em;
  }
 
